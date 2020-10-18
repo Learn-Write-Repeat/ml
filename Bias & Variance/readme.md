@@ -1,1 +1,2 @@
+# BIAS AND  VARIANCE
 
