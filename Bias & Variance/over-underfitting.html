@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Illustration of Over and Underfitting</title>
+    <meta name="theme-color" content="rgb(255,255,255)">
+    <meta name="twitter:title" content="Illustration of Over and Underfitting">
+    <meta name="twitter:description" content="You will get to know about the Bias-Variance Trade-Off and how to use it to get better performance on your data in this post.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="description" content="You will get to know about the Bias-Variance Trade-Off and how to use it to get better performance on your data in this post.">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crete+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md sticky-top" id="navigation" style="padding: 25px 0px;background-color: white;">
+        <div class="container-fluid container"><a class="navbar-brand" href="#" style="background-image: url(&quot;assets/img/CODES.gif&quot;);background-position: center;background-size: cover;background-repeat: no-repeat;width: 170px;height: 65px;"></a><button data-toggle="collapse" class="navbar-toggler"
+                data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse text-uppercase" id="navcol-1" style="font-family: Roboto, sans-serif;font-weight: bold;">
+                <ul class="nav navbar-nav ml-auto" style="font-size: 11px;">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Contribute</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Authors</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Free Courses</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="hero" style="background-color: #2f1b1b;color: rgb(255,255,255);">
+        <div style="padding: 30px;">
+            <p class="d-flex justify-content-center" style="font-family: Belgrano, serif;">&nbsp;Machine Learning</p>
+            <h1 class="d-flex justify-content-center topic-title" style="font-family: Belgrano, serif;">Illustration of Over and Underfitting<br></h1>
+        </div>
+        <div id="base" style="background-color: rgba(255,255,255,0.1);padding: 10px 0;font-family: Belgrano, serif;">
+            <p class="justify-content-center"><i class="fa fa-align-center"></i>&nbsp;&nbsp;<span id="visits"></span>&nbsp;Reads</p>
+        </div>
+    </section>
+    <section id="sidetab" style="margin-bottom: 0px;">
+        <div class="container-fluid">
+            <div class="row content-row">
+                <div class="col-3 author">
+                    <div class="author-details"><div>
+    <div class="author">
+        
+        <h2 class="author-title"> Author's Details </h2>
+        
+        <h3 class="author's-name"> Anshul Sharma </h3>
+      
+        
+        <ul>
+            <li><a target="_blank"  href="https://www.facebook.com/profile.php?id=100039009814742"><i class="fab fa-facebook"></i></a></li>
+<!--             <li><a href=""><i class="fab fa-twitter"></i></a></li> -->
+            <li><a target="_blank"   href="https://www.instagram.com/anshul_1923/"><i class="fab fa-instagram"></i></a></li>
+            <li><a  target="_blank"  href="https://github.com/thevoxium"><i class="fab fa-github"></i></a></li>
+            <li><a target="_blank"   href="https://www.linkedin.com/in/anshul-sharma-38aa481b4/"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+    </div>
+</div></div>
+                </div>
+                <div class="col-9 main-content">
+                    <div class="content-inner"><div>
+  <div class="blog-content">
+  <h1 id="illustration-of-over-and-underfitting-">Illustration of Over and Underfitting 💎</h1>
+
+<p>You will get to know about the Bias-Variance Trade-Off and how to use it to get better performance on your data in this post.</p>
+<p><img src="http://scott.fortmann-roe.com/docs/docs/BiasVariance/biasvariance.png" alt="image"><br>The basic goal of the Machine Learning model is to learn from the given data and generate predictions on unseen data. However, we need to continuously make improvements and evaluate our models. We also measure the model’s performance using metrics like Accuracy, Mean Squared Error(MSE), etc. The prediction error can be broken down broadly into three parts:</p>
+<ul>
+<li>Bias Error</li>
+<li>Variance Error</li>
+<li>Irreducible Error</li>
+</ul>
+<p>The irreducible error cannot be reduced as may be due to reasons that are unknown, like if the attributes have no relation with the target values or excessive noise in the data. You would like to gather new data or use that only.</p>
+<h2 id="bias-error">Bias Error</h2>
+<p>Bias are the assumptions made by a model to make the target function easier to learn, model may assume that the data is simple in representation to determine the target function fast. When it is introduced to the unseen data, these assumptions may not always be correct. Commonly, linear algorithms like linear regression have a high bias making them fast learners. Because of that sometimes, they may have poor performance on the validation/test data.</p>
+<ul>
+<li><strong><em>Low Bias</em></strong>: model makes less assumptions about the data.</li>
+<li><strong><em>High-Bias</em></strong>: model makes more assumptions about the data.</li>
+</ul>
+<p>Examples of low-bias machine learning algorithms include: Decision Trees, k-Nearest Neighbors and Support Vector Machines. (They are also some most powerful machine learning algorithms today 😃😃)</p>
+<h2 id="variance-error">Variance Error</h2>
+<p>Variance is quit opposite to bias. It happens is when the model takes into account the noise in the data. The target function is calculated mathematically from the training data, so we should expect the algorithm to have some ability to capture noise. But, it should generalize over new data. Machine learning algorithms that have a high variance are strongly influenced by the noise of the training data. </p>
+<ul>
+<li><strong><em>Low Variance</em></strong>: model makes small changes to the target function with changes to the training dataset.</li>
+<li><strong><em>High Variance</em></strong>: model makes large changes to the target function with changes to the training dataset.
+<img src="https://miro.medium.com/max/656/1*9hPX9pAO3jqLrzt0IE3JzA.png" alt="image"></li>
+<li>Linear algorithms often have a high bias but a low variance.</li>
+<li>Nonlinear algorithms often have a low bias but a high variance.</li>
+</ul>
+<p>If you decrease bias, variance will increase and vice versa. So, there is a trade off. You have to choose optimum values for both such that the error is less. Bias and Variance provide the tools to understand the behavior of machine learning algorithms in the terms of performance.</p>
+<h3 id="so-you-have-completed-this-topic-congratulations-">So you have completed this topic. Congratulations 🏆🏆.</h3>
+
+
+ <p class="ipynb-link">You can learn more about this topic from<a href="https://github.com/Learn-Write-Repeat/ml/blob/main/Bias%20%26%20Variance/Anshul_ML_Bias%26Variance.ipynb">here</a>.</p>
+ 
+   </div>
+
+
+</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="d-flex flex-column justify-content-center align-items-center" id="footer" style="padding-bottom: 0;">
+        <h1>DevIncept.codes</h1>
+        <h5>Contact us:</h5>
+        <p>Email:<a href="#">&nbsp;support@devincept.tech</a></p>
+        <div class="d-flex flex-row" id="social-button"><button class="btn btn-primary" type="button"><a href="https://www.linkedin.com/company/devincept/" target="_blank"><i class="fa fa-linkedin-square" style="font-size: 24px;" href=""></i></a></button><button class="btn btn-primary" type="button"><a href="https://www.facebook.com/DevIncept/" target="_blank"><i class="fa fa-facebook" style="font-size: 24px;"></i></a></button>
+            <button
+                class="btn btn-primary" type="button"><a href="https://www.instagram.com/devincept.tech/?hl=en" target="_blank"><i class="fa fa-instagram" style="font-size: 24px;"></i></a></button><button class="btn btn-primary" type="button"><a href="https://github.com/Learn-Write-Repeat" target="_blank"><i class="fa fa-github" style="font-size: 24px;"></i></a></button></div>
+    </footer>
+    <script>
+        function cb(response) {
+            document.getElementById('visits').innerText = response.value;
+        }
+    </script>
+    <script async src="https://api.countapi.xyz/hit/ml-over-and-underfitting/visits?callback=cb"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
