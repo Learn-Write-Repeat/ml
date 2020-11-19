@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Feature Scaling</title>
+    <meta name="theme-color" content="rgb(255,255,255)">
+    <meta name="twitter:title" content="Feature Scaling">
+    <meta name="twitter:description" content="Feature Scaling is a technique to standardize the independent features present in the data in the fixed range.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="description" content="Feature Scaling is a technique to standardize the independent features present in the data in the fixed range.">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crete+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md sticky-top" id="navigation" style="padding: 25px 0px;background-color: white;">
+        <div class="container-fluid container"><a class="navbar-brand" href="#" style="background-image: url(&quot;assets/img/CODES.gif&quot;);background-position: center;background-size: cover;background-repeat: no-repeat;width: 170px;height: 65px;"></a><button data-toggle="collapse" class="navbar-toggler"
+                data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse text-uppercase" id="navcol-1" style="font-family: Roboto, sans-serif;font-weight: bold;">
+                <ul class="nav navbar-nav ml-auto" style="font-size: 11px;">
+                <li class="nav-item" role="presentation"><a class="nav-link active"
+                        href="https://devincept.codes/contribute.html">Contribute</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link active" href="https://devincept.tech/pricing.html">Free
+                        courses</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="https://devincept.codes/sponsor.html">Sponsor us</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="hero" style="background-color: #2f1b1b;color: rgb(255,255,255);">
+        <div style="padding: 30px;">
+            <p class="d-flex justify-content-center" style="font-family: Belgrano, serif;">&nbsp;Machine Learning</p>
+            <h1 class="d-flex justify-content-center topic-title" style="font-family: Belgrano, serif;">Feature Scaling<br></h1>
+        </div>
+        <div id="base" style="background-color: rgba(255,255,255,0.1);padding: 10px 0;font-family: Belgrano, serif;">
+            <p class="justify-content-center"><i class="fa fa-align-center"></i>&nbsp;&nbsp;<span id="visits">0</span>&nbsp;Reads</p>
+        </div>
+    </section>
+    <section id="sidetab" style="margin-bottom: 0px;">
+        <div class="container-fluid">
+            <div class="row content-row">
+                <div class="col-3 author">
+                    <div class="author-details"><div>
+    <div class="author">
+        
+        <h2 class="author-title"> Author's Details </h2>
+        
+        <h3 class="author's-name"> Umesh Singh </h3>
+      
+        
+        <ul>
+
+            <li><a target="_blank" href="https://www.linkedin.com/in/umesh-singh-35629418b"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+    </div>
+</div></div>
+                </div>
+                <div class="col-9 main-content">
+                    <div class="content-inner"><div>
+  <div class="blog-content">
+        
+<h2 id="what-is-feature-scaling-">What is Feature Scaling?</h2>
+<p>=&gt; In machine learning algorithms, to bring all features in same standing, we need to do scaling so that one
+   significant number does not impact the model
+   because of their larger magnitude. <strong>Feature Scaling is a technique to standardize the independent features
+      present in the data in the fixed range</strong>.
+   Feature scaling is one of the most critical steps performed while data preprocessing. Scaling can make a difference
+   in weak machine learning algorithm and
+   better one. In short any algorithm which is distance based is affected by feature scaling. We can understand feature
+   scaling like in wrestling in some category
+   two persons of same weight wrestle.
+   Feature scaling is done in two ways:</p>
+<p>1.Mean Normalization:
+   <strong>Normalization is a scaling technique in which values are shifted and rescaled so that they end up ranging
+      between 0 and 1</strong> .
+   It is also known as min-max scaling.
+   <img src="https://media.geeksforgeeks.org/wp-content/uploads/min-max-normalisation.jpg" alt="Formula">
+   <img src="https://static.packt-cdn.com/products/9781789347999/graphics/84d43825-8e4e-47e2-a1c9-63cff1c41aca.png"
+      alt="Normalization"></p>
+<p>2.Standardization:
+   <strong>Standardization is another scaling technique where the values are standard around mean with a unit standard
+      deviation</strong>.
+   <img src="https://media.geeksforgeeks.org/wp-content/uploads/standardisation.jpg" alt="Formula">
+   <img src="https://scikit-learn.org/stable/_images/sphx_glr_plot_scaling_importance_001.png" alt="Standardization">
+   <img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2020/03/NormVsStand_box_plots-1.png"
+      alt="Feature-Scaling"></p>
+<h3 id="when-to-use-normalization-and-standardization-">When to use Normalization and Standardization?</h3>
+<p>=&gt; 1.Normalization is good to use when you know the distribution of data does not follow gaussian distribution
+   while on other hand when data follows gaussian
+   distribution standardization is used. Standardization does not have specific ranges while Normalization has range
+   between 0-1.</p>
+<ol>
+   <li>Normalization is performed when scale of feature is irrelvent or misleading and not should not normalize when
+      scale is meaningful.</li>
+</ol>
+<h3 id="why-feature-scaling-is-important-">Why Feature Scaling is Important?</h3>
+<p>=&gt; 1.Some machine learning algorithm like kNN are sensitive to features because if they are not in the same range
+   we can get ambiguous result. To avoid ambuguity
+   feature scaling is used.</p>
+<ol>
+   <li>Some algorithms which uses gradient descent like linear regression, logistic regression, neural networks,etc. for
+      optimization. They require data to be scaled.
+      The presence of feature value will affect the step size of gradient descent.</li>
+</ol>
+<h3 id="when-to-use-feature-scaling-">When to use feature scaling?</h3>
+<p>=&gt; 1.K-means: uses the euclidian distance where the feature scaling matters.
+   2.K-Nearest-Neighbours: also requires features scaling.
+   3.Principal component analysis(PCA): Tries to get feature with maximum variance, here too feature scaling is
+   required.
+   4.Gradiant Descent: Calculation speed increases where Theta calculation becomes faster after feature scaling.</p>
+ 
+ <p class="ipynb-link">You can learn more about this topic from<a href="https://github.com/Learn-Write-Repeat/ml/blob/main/Feature%20Scaling/Umesh_ML_FeatureScaling.ipynb">here</a>.</p>
+ 
+   </div>
+
+
+</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="d-flex flex-column justify-content-center align-items-center" id="footer" style="padding-bottom: 0;">
+        <h1>DevIncept.codes</h1>
+        <h5>Contact us:</h5>
+        <p>Email:<a href="#">&nbsp;support@devincept.tech</a></p>
+        <div class="d-flex flex-row" id="social-button"><button class="btn btn-primary" type="button"><a href="https://www.linkedin.com/company/devincept/" target="_blank"><i class="fa fa-linkedin-square" style="font-size: 24px;" href=""></i></a></button><button class="btn btn-primary" type="button"><a href="https://www.facebook.com/DevIncept/" target="_blank"><i class="fa fa-facebook" style="font-size: 24px;"></i></a></button>
+            <button
+                class="btn btn-primary" type="button"><a href="https://www.instagram.com/devincept.tech/?hl=en" target="_blank"><i class="fa fa-instagram" style="font-size: 24px;"></i></a></button><button class="btn btn-primary" type="button"><a href="https://github.com/Learn-Write-Repeat" target="_blank"><i class="fa fa-github" style="font-size: 24px;"></i></a></button></div>
+    </footer>
+    <script>
+        function cb(response) {
+            document.getElementById('visits').innerText = response.value;
+        }
+    </script>
+    <script async src="https://api.countapi.xyz/hit/ml-feature-scaling/visits?callback=cb"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
