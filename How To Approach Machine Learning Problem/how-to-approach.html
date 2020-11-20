@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Approach a Machine Learning problem</title>
+    <meta name="theme-color" content="rgb(255,255,255)">
+    <meta name="twitter:title" content="Approach a Machine Learning Problem">
+    <meta name="twitter:description" content="This page discusses a generic step-wise approach on attempting to solve a problem at hand using Machine Learning. ">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="description" content="This page discusses a generic step-wise approach on attempting to solve a problem at hand using Machine Learning. ">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crete+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md sticky-top" id="navigation" style="padding: 25px 0px;background-color: white;">
+        <div class="container-fluid container"><a class="navbar-brand" href="#" style="background-image: url(&quot;assets/img/CODES.gif&quot;);background-position: center;background-size: cover;background-repeat: no-repeat;width: 170px;height: 65px;"></a><button data-toggle="collapse" class="navbar-toggler"
+                data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse text-uppercase" id="navcol-1" style="font-family: Roboto, sans-serif;font-weight: bold;">
+                <ul class="nav navbar-nav ml-auto" style="font-size: 11px;">
+                  <li class="nav-item" role="presentation"><a class="nav-link active"
+                        href="https://devincept.codes/contribute.html">Contribute</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link active" href="https://devincept.tech/pricing.html">Free
+                        courses</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link" href="https://devincept.codes/sponsor.html">Sponsor us</a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="hero" style="background-color: #2f1b1b;color: rgb(255,255,255);">
+        <div style="padding: 30px;">
+            <p class="d-flex justify-content-center" style="font-family: Belgrano, serif;">&nbsp;Machine Learning</p>
+            <h1 class="d-flex justify-content-center topic-title" style="font-family: Belgrano, serif;">Approach a Machine Learning Problem<br></h1>
+        </div>
+        <div id="base" style="background-color: rgba(255,255,255,0.1);padding: 10px 0;font-family: Belgrano, serif;">
+            <p class="justify-content-center"><i class="fa fa-align-center"></i>&nbsp;&nbsp;<span id="visits">0</span>&nbsp;Reads</p>
+        </div>
+    </section>
+    <section id="sidetab" style="margin-bottom: 0px;">
+        <div class="container-fluid">
+            <div class="row content-row">
+                <div class="col-3 author">
+                    <div class="author-details"><div>
+    <div class="author">
+        
+        <h2 class="author-title"> Author's Details </h2>
+        
+        <h3 class="author's-name">Inziya Dossa  </h3>
+      
+        
+        <ul>
+            
+            <li><a target="_blank" href="https://www.linkedin.com/in/inziya-dossa/"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+    </div>
+</div></div>
+                </div>
+                <div class="col-9 main-content">
+                    <div class="content-inner"><div>
+  <div class="blog-content">
+        
+ <h2 id="how-to-approach-a-machine-learning-problem-">How to approach a Machine Learning problem ??</h2>
+<p>This page discusses a <em>generic step-wise approach</em> on attempting to solve a problem at hand using Machine
+   Learning. However in real practice, not all steps would be
+   necessarily taken depending on the problem statement, time constraints, computation power/tools available, the data
+   and the final goal. But these steps would provide a
+   good mind-map to a beginner or intermediate ML practitioner so as to understand how all the ML concepts fit together
+   in the puzzle, when each concept needs to be applied
+   and to not forget or skip any necessary element along the way.</p>
+<p>I would first list out the approach taken by a newbie in ML (which is not wrong or incorrect given the early stage)
+   and then discuss what changes and additions need
+   to be made in his approach as he transitions ahead in his ML journey. </p>
+<p>So lets get started...</p>
+<h3 id="how-would-a-beginner-face-an-ml-problem-">How would a beginner face an ML problem?</h3>
+<ul>
+   <li>Fetch the dataset from an open source (mostly a well defined excel/csv sheet)</li>
+   <li>Take a quick look at the dataset and perform basic cleaning and arranging of data</li>
+   <li>Assigning the feature and target variable according to the problem statement</li>
+   <li>Try out one or two ML algorithms by looking at the output variable datatype and build their models</li>
+   <li>Compare model accuracy on test data</li>
+   <li>Pick out the model which gives best accuracy</li>
+   <li>FINISH</li>
+</ul>
+<p>If only it would have been that easy! Although happy today, sooner or later the beginner would realize the above
+   listed steps dont just go well with one another in sequence.
+   The data he gets is messy, the problem statement doesn&#39;t seem to be clear when taking a look at the data, there
+   would be many ML algorithms that would seem suitable
+   for use, the accuracy score doesn&#39;t tally when the model is put to practice or the created model does not give
+   results upon which the next steps can be taken upon.</p>
+<p>Thats when the current known mini-approach needs to undergo some mature changes</p>
+<h3 id="generic-and-recommended-approach-to-deal-with-an-ml-problem-">Generic and recommended approach to deal with an
+   ML problem:</h3>
+<ul>
+   <li>
+      <p><strong>Understand thoroughly the Problem Statement - Do you really need ML?</strong></p>
+      <p>This may sound vague, but many simple business problem statements that can be well solved using traditional
+         methods or basic data reporting are fed into computationally
+         expensive ML models, wasting time and resources. Being an ML Engineer is of no real use when you can&#39;t
+         figure out if the business problems really require Machine Learning
+         Algorithms. From a business approach, cost efficiency and flexibility of the proposed solution should be the
+         sole motive when building solutions.
+         This requires a very deep and clear-cut understanding of the business problem statement. Here aresome points
+         that need to be thought of:</p>
+      <ul>
+         <li>What is the main goal/motive that needs to get fulfilled?</li>
+         <li>Is the problem statement straightforward or ambiguous?</li>
+         <li>Can the problem be solved by traditional methods, basic data analytics/reporting or simply by pure
+            expertise consultation?</li>
+         <li>Is the same problem occuring again and again?</li>
+         <li>What are the next steps that need to be taken after acquiring the problem solution?</li>
+         <li>
+            <p>What is the impact of the problem statement and to who will it prove beneficial?</p>
+            <p>After getting the above answers, you will surely know if Machine Learning is the right boat to hop into
+               for your problem statement.</p>
+         </li>
+      </ul>
+   </li>
+   <li>
+      <p><strong>Gather the RIGHT data</strong></p>
+      <p> After deeply understanding the purpose, depth and scope of the problem, the very next step is to fetch or look
+         out for the <em>right</em> data that will suit your business
+         needs and is relevant enough to gain insights. The domain experts should be consulted, available resources
+         should be listed and discussed upon and if additional
+         data is needed should be again searched. The most important aspect to keep in mind is that RIGHT data should be
+         collected. Here are some of the points when looking
+         out for the RIGHT data:</p>
+      <ul>
+         <li>Is the data relevant to my business use case?</li>
+         <li>Does the data cover the important dimensions and factors that will impact my solution output?</li>
+         <li>Is the data not too complicated to understand and not very costly?</li>
+         <li>Is the data accurate? Does it has any hidden assumptions or constraints?</li>
+         <li>Does the data cover all target category instances or only a subset of them?
+            (eg. for understanding the health habits of the entire US population, only gathering data related to the US
+            youth would not be sufficient)</li>
+         <li>Is the data in a sufficient quantity?</li>
+         <li>
+            <p>Does the data comply with user privacy and/or business security agreements?</p>
+            <p>This process is expected to take ample time since the correct data should be collected. However for
+               building a rough/prototype solution, don&#39;t spend
+               ages for the process since the process can also be re-iterated upon once the solution version is accepted
+               for further builds and improvements.
+               We then move on to the next step.</p>
+         </li>
+      </ul>
+   </li>
+</ul>
+<ul>
+   <li>
+      <p><strong>Data Exploration</strong></p>
+      <p> This step indicates a quick data exploration activity that you do to get familiar with the dataset. This step
+         is NOT related to Exploratory Data Analysis where we
+         try to validate some assumptions we must have made to gain deep insights for maing decisions. This is just a
+         basic glimpse that to take into your data window and
+         figure out what treatments are to be made later.</p>
+      <ul>
+         <li>Plot few basic charts like bar chart , box-plot and histogram</li>
+         <li>See some descriptive statistics of the data</li>
+         <li>Get a gist of what to do next keeping your problem statement in mind</li>
+      </ul>
+   </li>
+   <li>
+      <p><strong>Select an ML Algorithm</strong></p>
+      <p> Now that you have gained the knowledge of your dataset&#39;s basic characteristics, its time to list down a
+         few ML Algorithms that may help in solving the problem.
+         This depends highly on the target variable, type of learning and features available.</p>
+      <p> <img src="https://blogs.sas.com/content/subconsciousmusings/files/2017/04/machine-learning-cheet-sheet.png"
+            alt=""></p>
+      <p> There are many more models to choose from:</p>
+      <p> <img src="https://s3.amazonaws.com/MLMastery/MachineLearningAlgorithms.png?__s=skh1zniyiw9vuz7ppzxp" alt="">
+      </p>
+   </li>
+</ul>
+<ul>
+   <li>
+      <p><strong>CLEAN and PREPARE and REDO!!</strong></p>
+      <p> About 75% to 80% of time of a Data Scientist/ML Engineer goes into cleaning the real world messy data and
+         preparing it so that it can be consumed by the models.
+         Different ML algorithms need different preparation and cleaning of data. \</p>
+      <p> Here is a basic list to get started with: (however not all may be required depending on your use case)</p>
+      <p> <img src="https://media.geeksforgeeks.org/wp-content/uploads/20190312184006/Data-Preprocessing.png" alt="">
+      </p>
+   </li>
+   <li>
+      <p><strong>Run and Evaluate your model</strong></p>
+      <p> Very straightforward - create,run and test your model on the testing data. Keep in mind that there are tons of
+         evaluation criteria to compare which model is the best of
+         all apart from accuracy metrics. Select your model by choosing your eveluation metrics wisely.
+         Here area few basic metrics to explore:</p>
+      <p> <img
+            src="https://3qeqpr26caki16dnhd19sv6by6v-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/How-to-Choose-a-Metric-for-Imbalanced-Classification-latest.png"
+            alt=""></p>
+   </li>
+   <li>
+      <p><strong>Tweak the chosen model</strong></p>
+      <p> After you finally select a good model for your problem statement, tweak its hyperparameters to polish it for
+         the real world data. Check if its output matches
+         your business problem expectations.</p>
+   </li>
+   <li>
+      <p><strong>Consume the results</strong></p>
+      <p> This part is often neglected by most of the ML Engineers, how to effectively present/deploy the model for the
+         client. Some aspects include:</p>
+      <ul>
+         <li>Present your findings in a documented format</li>
+         <li>Deploy the model to run at scale</li>
+         <li>Storytelling your ML Process to your business stakeholders</li>
+      </ul>
+   </li>
+   <li>
+      <p><strong>FINISH, Yet Starting</strong></p>
+      <p> With this we may have finished with the Problem Solving Approach, but ML engineers have a lot to yet in real
+         world. This includes real time deployment or CI/CD
+         of the model, making it scalable, health checking of the data and the model and much more. While we dont cover
+         those advanced concepts, it is recommended
+         that you learn about it at your later stages.</p>
+   </li>
+</ul>
+<p>Here is an awsome reference for everyone who wants to go in depth or learn each of the steps mentioned above from
+   scratch.<br>
+    <a
+      href="https://machinelearningmastery.com/start-here/">https://machinelearningmastery.com/start-here/</a>
+      </p>
+ 
+ 
+   </div>
+
+
+</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="d-flex flex-column justify-content-center align-items-center" id="footer" style="padding-bottom: 0;">
+        <h1>DevIncept.codes</h1>
+        <h5>Contact us:</h5>
+        <p>Email:<a href="#">&nbsp;support@devincept.tech</a></p>
+        <div class="d-flex flex-row" id="social-button"><button class="btn btn-primary" type="button"><a href="https://www.linkedin.com/company/devincept/" target="_blank"><i class="fa fa-linkedin-square" style="font-size: 24px;" href=""></i></a></button><button class="btn btn-primary" type="button"><a href="https://www.facebook.com/DevIncept/" target="_blank"><i class="fa fa-facebook" style="font-size: 24px;"></i></a></button>
+            <button
+                class="btn btn-primary" type="button"><a href="https://www.instagram.com/devincept.tech/?hl=en" target="_blank"><i class="fa fa-instagram" style="font-size: 24px;"></i></a></button><button class="btn btn-primary" type="button"><a href="https://github.com/Learn-Write-Repeat" target="_blank"><i class="fa fa-github" style="font-size: 24px;"></i></a></button></div>
+    </footer>
+    <script>
+      function cb(response) {
+         document.getElementById('visits').innerText = response.value;
+      }
+   </script>
+   <script async src="https://api.countapi.xyz/hit/ml-how-to-approach/visits?callback=cb"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
