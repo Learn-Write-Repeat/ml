@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Logistic Regression</title>
+    <meta name="theme-color" content="rgb(255,255,255)">
+    <meta name="twitter:description" content="Logistic Regression is a simplest yet widely used algorithm used in Machine Learning used for binary predictions.">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="">
+    <meta property="og:type" content="article">
+    <meta name="description" content="Logistic Regression is a simplest yet widely used algorithm used in Machine Learning used for binary predictions.">
+    <meta name="twitter:title" content="Logistic Regression">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crete+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md sticky-top" id="navigation" style="padding: 25px 0px;background-color: white;">
+        <div class="container-fluid container"><a class="navbar-brand" href="#" style="background-image: url(&quot;assets/img/CODES.gif&quot;);background-position: center;background-size: cover;background-repeat: no-repeat;width: 170px;height: 65px;"></a><button data-toggle="collapse" class="navbar-toggler"
+                data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse text-uppercase" id="navcol-1" style="font-family: Roboto, sans-serif;font-weight: bold;">
+               <ul class="nav navbar-nav ml-auto" style="font-size: 13px;">
+                  <li class="nav-item" role="presentation"><a class="nav-link active"
+                        href="https://devincept.codes/contribute.html">Contribute</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link active" href="https://devincept.tech/pricing.html">Free
+                        courses</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link" href="https://devincept.codes/sponsor.html">Sponsor
+                        us</a></li>
+               </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="hero" style="background-color: #2f1b1b;color: rgb(255,255,255);">
+        <div style="padding: 30px;">
+            <p class="d-flex justify-content-center" style="font-family: Belgrano, serif;">&nbsp;Machine Learning</p>
+            <h1 class="d-flex justify-content-center topic-title" style="font-family: Belgrano, serif;">Logistic Regression</h1>
+        </div>
+        <div id="base" style="background-color: rgba(255,255,255,0.1);padding: 10px 0;font-family: Belgrano, serif;">
+            <p class="justify-content-center"><i class="fa fa-align-center"></i>&nbsp;&nbsp;<span id="visits">0</span>&nbsp;Reads</p>
+        </div>
+    </section>
+    <section id="sidetab" style="margin-bottom: 0px;">
+        <div class="container-fluid">
+            <div class="row content-row">
+                <div class="col-3 author">
+                    <div class="author-details"><div>
+    <div class="author">
+        
+        <h2 class="author-title"> Author's Details </h2>
+        
+        <h3 class="author's-name"> Ankur</h3>
+      
+        
+        <ul>
+           
+        </ul>
+    </div>
+</div></div>
+                </div>
+                <div class="col-9 main-content">
+                    <div class="content-inner"><div>
+  <div class="blog-content">
+        <h1 id="logistic-regression">Logistic Regression</h1>
+<p>Its a simplest yet widely used algorithm used in Machine Learning used for <em>binary predictions</em>.</p>
+
+<p>Logistic regression is a classification algorithm used to assign observations to a discrete set of classes.</p>
+<p>It is a statistical method for predicting binary classes. The outcome or target variable is dichotomous in nature.
+   Dichotomous means there are only two possible classes. For example, it can be used for problems like: whether the
+   loan of an individual gets approved or not, predicting whether a student passes or fails in his/her SAT exam . It
+   computes the probability of an event occurrence.</p>
+<ul>
+   <li>It is a special case of linear regression where the target variable is categorical in nature. It uses a log of
+      odds as the dependent variable. Logistic Regression predicts the probability of occurrence of a binary event
+      utilizing a logit function.</li>
+</ul>
+
+<p>A linear regression is a linear approximation of a casual relationship between two or more variables. In more simpler
+   words,</p>
+<p>In linear model, we have a <em>dependent variable or target variable</em> and x<sub>n</sub> <em>dependent varaibles
+      or features</em> from which we predict our target variable.</p>
+<p>In general, these methods are used to predict the value of a response (dependent) variable from one or more predictor
+   (independent) variables, where the variables are numeric.&quot;</p>
+<h3 id="what-s-so-special-about-_logistic-regression_-">What&#39;s so special about <em>Logistic Regression</em> ?</h3>
+<p>Logistic regression predicts the probability of an outcome that can only have two values (i.e. a dichotomy). The
+   prediction is based on the use of one or several predictors (numerical and categorical). A linear regression is not
+   appropriate for predicting the value of a binary variable for two reasons: </p>
+<ul>
+   <li>A linear regression will predict values outside the acceptable range (e.g. predicting probabilities
+      outside the range 0 to 1)</li>
+   <li>Since the dichotomous experiments can only have one of two possible values for each experiment, the residuals
+      will not be normally distributed about the predicted line.</li>
+</ul>
+<p>On the other hand, a logistic regression produces a logistic curve, which is limited to values between <em>0</em> and
+   <em>1</em>.</p>
+<p>In Logistic Regression, the curve is constructed using the natural logarithm of the “odds” of the target variable,
+   rather than the probability. Moreover, the predictors do not have to be normally distributed or have equal variance
+   in each group.</p>
+<h3 id="mathematical-equation-of-logistic-regression">Mathematical Equation of Logistic Regression</h3>
+<p>Let&#39;s see the linear regression equation...</p>
+<h4 id="linear-regression-equation-">Linear Regression equation:</h4>
+<p> y= b<sub>o</sub> + b<sub>1</sub> * x<sub>1</sub></p>
+<p>In the logistic regression the constant (b0) moves the curve left and right and the slope (b1) defines the steepness
+   of the curve. By simple transformation, the logistic regression equation can be written in terms of an odds ratio.
+</p>
+<p><img src="https://www.saedsayad.com/images/Logistic_odd.png" alt="regression"></p>
+<p>Finally, taking the natural log of both sides, we can write the equation in terms of log-odds (logit) which is a
+   linear function of the predictors. The coefficient (b1) is the amount the logit (log-odds) changes with a one unit
+   change in x. </p>
+<p><img src="https://www.saedsayad.com/images/Logit.png" alt="equation"></p>
+<p>Logistic regression can handle any number of numerical and/or categorical variables.</p>
+<p><img src="https://www.saedsayad.com/images/LogReg_eq.png" alt="logistic"></p>
+<p>Visualization of Linear and Logisic Regression</p>
+<p><img src="https://www.saedsayad.com/images/LogReg_1.png" alt=""></p>
+<h3 id="the-s-shape-we-see-from-the-logistic-regression-model-as-it-uses-sigmoid-function-">The &#39;S&#39; shape we see
+   from the logistic regression model as it uses <em>Sigmoid Function</em></h3>
+<h3 id="here-s-what-we-have-learned-so-far-">Here&#39;s what we have learned so far.</h3>
+<p>Model</p>
+<p>Output = 0 or 1</p>
+<p>Hypothesis =&gt; Y = WX + B</p>
+<p>hΘ(x) = sigmoid (Z)</p>
+<h3 id="cost-function-for-logistic-regression">Cost function for Logistic Regression</h3>
+<p>The cost function is calculated as an average of loss functions.The loss function is a value which is calculated at
+   every instance.
+   The loss function maps the model output of a single training example to their associated costs. It takes as input the
+   model prediction and ground truth and outputs a numerical value.</p>
+<p>Loss-function L: P*T -&gt; R
+   where,<br>
+   P = set of all predictions</p>
+<p>T = ground truths</p>
+<p>R = real numbers set.</p>
+<p>Instead of Mean Squared Error, we use a cost function called Cross-Entropy, also known as Log Loss. Cross-entropy
+   loss can be divided into two separate cost functions: one for y=1 and one for y=0.</p>
+<p><img src="https://miro.medium.com/max/623/1*TqZ9myxIdLuKNmt8orCeew.png" alt="costfunc"></p>
+<p>Just as ordinary least square regression is the method used to estimate coefficients for the best fit line in linear
+   regression, logistic regression uses maximum likelihood estimation (MLE) to obtain the model coefficients that relate
+   predictors to the target. After this initial function is estimated, the process is repeated until LL (Log Likelihood)
+   does not change significantly. </p>
+<p>So, all we have the output value in a boundary between 0 and 1.</p>
+<h3 id="an-important-note-">An important note!</h3>
+<p>Maximizing the (log) likelihood is equivalent to minimizing the binary cross entropy.
+   There is literally no difference between the two objective functions, so there can be no difference between the
+   resulting model or its characteristics.</p>
+<h3 id="reference-links-">Reference links:</h3>
+<p><a href="https://towardsdatascience.com/logistic-regression-detailed-overview-46c4da4303bc">Medium</a></p>
+<p><a href="https://ml-cheatsheet.readthedocs.io/en/latest/logistic_regression.html">ml-cheatsheet</a></p>
+
+ 
+ <p class="ipynb-link">You can learn more about this topic from<a href="https://github.com/Learn-Write-Repeat/ml/blob/main/Logistic%20Regression/Ankur_ML_Logistic_regression.ipynb">here</a>.</p>
+ 
+   </div>
+
+
+</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="d-flex flex-column justify-content-center align-items-center" id="footer" style="padding-bottom: 0;">
+        <h1>DevIncept.codes</h1>
+        <h5>Contact us:</h5>
+        <p>Email:<a href="#">&nbsp;support@devincept.tech</a></p>
+        <div class="d-flex flex-row" id="social-button"><button class="btn btn-primary" type="button"><a href="https://www.linkedin.com/company/devincept/" target="_blank"><i class="fa fa-linkedin-square" style="font-size: 24px;" href=""></i></a></button><button class="btn btn-primary" type="button"><a href="https://www.facebook.com/DevIncept/" target="_blank"><i class="fa fa-facebook" style="font-size: 24px;"></i></a></button>
+            <button
+                class="btn btn-primary" type="button"><a href="https://www.instagram.com/devincept.tech/?hl=en" target="_blank"><i class="fa fa-instagram" style="font-size: 24px;"></i></a></button><button class="btn btn-primary" type="button"><a href="https://github.com/Learn-Write-Repeat" target="_blank"><i class="fa fa-github" style="font-size: 24px;"></i></a></button></div>
+    </footer>
+    <script>
+      function cb(response) {
+         document.getElementById('visits').innerText = response.value;
+      }
+   </script>
+   <script async src="https://api.countapi.xyz/hit/ml-logistic/visits?callback=cb"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
