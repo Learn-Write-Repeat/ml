@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Naive Bayes Algorithm</title>
+    <meta name="theme-color" content="rgb(255,255,255)">
+    <meta name="twitter:title" content="Naive Bayes Algorithm">
+    <meta name="description" content="Naive Bayes is a probability based machine learning algorithm that is used for large volumes of data.">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="">
+    <meta property="og:type" content="article">
+    <meta name="twitter:description" content="Naive Bayes is a probability based machine learning algorithm that is used for large volumes of data.">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crete+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md sticky-top" id="navigation" style="padding: 25px 0px;background-color: white;">
+        <div class="container-fluid container"><a class="navbar-brand" href="#" style="background-image: url(&quot;assets/img/CODES.gif&quot;);background-position: center;background-size: cover;background-repeat: no-repeat;width: 170px;height: 65px;"></a><button data-toggle="collapse" class="navbar-toggler"
+                data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse text-uppercase" id="navcol-1" style="font-family: Roboto, sans-serif;font-weight: bold;">
+                <ul class="nav navbar-nav ml-auto" style="font-size: 13px;">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="https://devincept.codes/contribute.html">Contribute</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="https://devincept.tech/pricing.html">Free courses</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="https://devincept.codes/sponsor.html">Sponsor us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="hero" style="background-color: #2f1b1b;color: rgb(255,255,255);">
+        <div style="padding: 30px;">
+            <p class="d-flex justify-content-center" style="font-family: Belgrano, serif;">&nbsp;Machine Learning</p>
+            <h1 class="d-flex justify-content-center topic-title" style="font-family: Belgrano, serif;">Naive Bayes Algorithm<br></h1>
+        </div>
+        <div id="base" style="background-color: rgba(255,255,255,0.1);padding: 10px 0;font-family: Belgrano, serif;">
+            <p class="justify-content-center"><i class="fa fa-align-center"></i>&nbsp;&nbsp;<span id="visits">0</span>&nbsp;Reads</p>
+        </div>
+    </section>
+    <section id="sidetab" style="margin-bottom: 0px;">
+        <div class="container-fluid">
+            <div class="row content-row">
+                <div class="col-3 author">
+                    <div class="author-details"><div>
+    <div class="author">
+        
+        <h2 class="author-title"> Author's Details </h2>
+        
+        <h3 class="author's-name"> Aryan Rastogi
+ </h3>
+      
+        
+        <ul>
+           
+            <li><a target="_blank" href="https://github.com/AryanRastogi7767"><i class="fab fa-github"></i></a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/aryan-rastogi-b38ba1190/"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+    </div>
+</div></div>
+                </div>
+                <div class="col-9 main-content">
+                    <div class="content-inner"><div>
+  <div class="blog-content">
+<h1 id="naive-bayes-algorithm">Naive Bayes Algorithm</h1>
+
+<p>This markdown file is to give you a detailed and easy-to-understand explaination of WHAT the famous Naive
+      Bayes algorithm is and WHY it is used widely in the field of machine learning.
+      </p>
+<h3 id="what-is-naive-bayes-question-">What is Naive Bayes ?</h3>
+<ul>
+   <li>Naive Bayes is a probability based machine learning algorithm that is used for large volumes of data.</li>
+   <li>It gives very good results when it comes to NLP tasks such as sentimental analysis. </li>
+   <li>It is a fast and uncomplicated classification algorithm.</li>
+   <li>It is based on the <em>Bayes Theorem</em> with an assumption of independence among predictors.</li>
+</ul>
+<h3 id="what-are-it-s-applications-closed_book-">What are it&#39;s applications ?</h3>
+<ul>
+   <li><strong>Real Time Prediction:</strong> As Naive Bayes has low Time Complexity, it can be easily deployed and used
+      for real time applications.</li>
+   <li><strong>Multi-Class Prediction:</strong> The algorithm can be used in multi-class prediction scenario as it can
+      predict the posterior probability of mulltiple classes of the target variable.</li>
+   <li><strong>Natural Language Processing:</strong> Because of their good performance in multi-class settings, Naive
+      Bayes tends to be very useful in NLP applications like:<ul>
+         <li>Text Classification</li>
+         <li>Spam Filtering</li>
+         <li>Sentiment Analysis, etc.</li>
+      </ul>
+   </li>
+   <li><strong>Recommendation Systems:</strong> It helps in recommendation system because of probabilistic prediction
+      ability and low time complexity.</li>
+</ul>
+<h3 id="types-of-naive-bayes-algorithms-file_folder-">Types of Naive Bayes Algorithms:</h3>
+<ul>
+   <li><strong>Gaussian Naive Bayes:</strong>
+      <ul>
+         <li>Used in Classification</li>
+         <li>Assumes that features follow normal distribution</li>
+      </ul>
+   </li>
+   <li><strong>Multinomial Naive Bayes:</strong>
+      <ul>
+         <li>Suitable for classification with discrete features, e.g., word count for text classification.</li>
+      </ul>
+   </li>
+   <li><strong>Bernoulli Naive Bayes:</strong>
+      <ul>
+         <li>Used for data that is distributed according to multivariate Bernoulli distributions.</li>
+         <li>Features should be independent booleans.</li>
+      </ul>
+   </li>
+</ul>
+<h3 id="why-is-naive-bayes-so-naive-open_mouth-">Why is Naive Bayes so naive ?</h3>
+<ul>
+   <li>Naive Bayes (NB) is ‘naive’ because it makes the assumption that features of a measurement are independent of
+      each other.</li>
+</ul>
+<h3 id="pros-and-cons-of-naive-bayes-">Pros and Cons of Naive Bayes:</h3>
+<h3 id="pros-white_check_mark-">Pros :</h3>
+<ul>
+   <li>Highly extensible and fast algorithm , Time Complexity:O(nK), where n is the number of features and K is the
+      number of class lables.</li>
+   <li>Performs well in both binary and multi-class settings.</li>
+   <li>When assumption of independence holds, a Naive Bayes classifier performs better compare to other models like
+      logistic regression and you need less training data.</li>
+   <li>Performs well whin data is categorical or normally distributed.</li>
+   <li>Can be easily trained on small datasets and can be used for large ones as well.</li>
+</ul>
+<h3 id="cons-x-">Cons :</h3>
+<ul>
+   <li>The main disadvantage of the NB is considering all the variables independent that contributes to the probability.
+   </li>
+   <li>If categorical variable has a category (in test data set), which was not observed in training data set, then
+      model will assign a 0 (zero) probability and will be unable to make a prediction. This is often known as “Zero
+      Frequency”. To solve this, we can use the smoothing techniques like Laplace or Additive smoothing.</li>
+</ul>
+
+
+      <p class="ipynb-link">You can learn more about this topic from<a href="https://github.com/Learn-Write-Repeat/ml/blob/main/Naive%20Bayes/Aryan_ML_Naive_Bayes.ipynb">here</a>.</p>
+ 
+   </div>
+
+
+
+</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="d-flex flex-column justify-content-center align-items-center" id="footer" style="padding-bottom: 0;">
+        <h1>DevIncept.codes</h1>
+        <h5>Contact us:</h5>
+        <p>Email:<a href="#">&nbsp;support@devincept.tech</a></p>
+        <div class="d-flex flex-row" id="social-button"><button class="btn btn-primary" type="button"><a href="https://www.linkedin.com/company/devincept/" target="_blank"><i class="fa fa-linkedin-square" style="font-size: 24px;" href=""></i></a></button><button class="btn btn-primary" type="button"><a href="https://www.facebook.com/DevIncept/" target="_blank"><i class="fa fa-facebook" style="font-size: 24px;"></i></a></button>
+            <button
+                class="btn btn-primary" type="button"><a href="https://www.instagram.com/devincept.tech/?hl=en" target="_blank"><i class="fa fa-instagram" style="font-size: 24px;"></i></a></button><button class="btn btn-primary" type="button"><a href="https://github.com/Learn-Write-Repeat" target="_blank"><i class="fa fa-github" style="font-size: 24px;"></i></a></button></div>
+    </footer>
+    <script>
+      function cb(response) {
+         document.getElementById('visits').innerText = response.value;
+      }
+   </script>
+   <script async src="https://api.countapi.xyz/hit/ml-naive-bayes/visits?callback=cb"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
