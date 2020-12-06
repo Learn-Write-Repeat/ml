@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>K-Nearest Neighbors</title>
+    <meta name="theme-color" content="rgb(255,255,255)">
+    <meta name="twitter:title" content="K-Nearest Neighbors.">
+    <meta name="twitter:description" content="It is a Supervised Machine Learning Algorithm that used in the variety of applications such as finance, healthcare, political science, handwriting detection, image recognition and video recognition. In Credit ratings, financial institutes will predict the credit rating of customers.
+">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="description" content="It is a Supervised Machine Learning Algorithm that used in the variety of applications such as finance, healthcare, political science, handwriting detection, image recognition and video recognition. In Credit ratings, financial institutes will predict the credit rating of customers.
+">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crete+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md sticky-top" id="navigation" style="padding: 25px 0px;background-color: white;">
+        <div class="container-fluid container"><a class="navbar-brand" href="https://devincept.codes/" style="background-image: url(&quot;assets/img/CODES.gif&quot;);background-position: center;background-size: cover;background-repeat: no-repeat;width: 170px;height: 65px;"></a><button data-toggle="collapse" class="navbar-toggler"
+                data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse text-uppercase" id="navcol-1" style="font-family: Roboto, sans-serif;font-weight: bold;">
+                <ul class="nav navbar-nav ml-auto" style="font-size: 11px;">
+                    <li class="nav-item" role="presentation"><a class="nav-link active"
+                            href="https://devincept.codes/contribute.html">Contribute</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="https://devincept.tech/pricing.html">Free
+                            courses</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="https://devincept.codes/sponsor.html">Sponsor us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="hero" style="background-color: #2f1b1b;color: rgb(255,255,255);">
+        <div style="padding: 30px;">
+            <p class="d-flex justify-content-center" style="font-family: Belgrano, serif;">&nbsp;Machine Learning</p>
+            <h1 class="d-flex justify-content-center topic-title" style="font-family: Belgrano, serif;">&nbsp;K-Nearest Neighbors.<br></h1>
+        </div>
+        <div id="base" style="background-color: rgba(255,255,255,0.1);padding: 10px 0;font-family: Belgrano, serif;">
+            <p class="justify-content-center"><i class="fa fa-align-center"></i>&nbsp;&nbsp;<span id="visits">0</span>&nbsp;Reads</p>
+        </div>
+    </section>
+    <section id="sidetab" style="margin-bottom: 0px;">
+        <div class="container-fluid">
+            <div class="row content-row">
+                <div class="col-3 author">
+                    <div class="author-details"><div>
+    <div class="author">
+        
+        <h2 class="author-title"> Author's Details </h2>
+        
+        <h3 class="author's-name"> Ankur </h3>
+      
+        
+        
+    </div>
+</div></div>
+                </div>
+                <div class="col-9 main-content">
+                    <div class="content-inner"><div>
+  <div class="blog-content">
+        <h2 id="knn-k-nearest-neighbors">KNN: K-Nearest Neighbors</h2>
+<p><strong>Let us consider a simple example, if apple looks more similar to peach, pear, and cherry (fruits) than monkey, cat or a rat (animals), then most likely apple is a fruit.</strong></p>
+<h4 id="it-is-a-supervised-machine-learning-algorithm-that-used-in-the-variety-of-applications-such-as-finance-healthcare-political-science-handwriting-detection-image-recognition-and-video-recognition-in-credit-ratings-financial-institutes-will-predict-the-credit-rating-of-customers-">It is a Supervised Machine Learning Algorithm that used in the variety of applications such as finance, healthcare, political science, handwriting detection, image recognition and video recognition. In Credit ratings, financial institutes will predict the credit rating of customers.</h4>
+<h4 id="knn-can-be-used-for-both-clasification-and-regression-problems-it-is-based-on-feature-similaritiy-approach-">KNN can be used for both clasification and regression problems. It is based on feature similaritiy approach.</h4>
+<h4 id="what-is-the-algorithm-it-s-basically-classifies-a-data-point-based-on-how-its-neighbours-are-classified-">What is the Algorithm? It&#39;s basically classifies a data point based on how its neighbours are classified.</h4>
+<p><img src="http://res.cloudinary.com/dyd911kmh/image/upload/f_auto,q_auto:best/v1531424125/KNN_final_a1mrv9.png" alt="IMG"></p>
+<h4 id="we-can-implement-a-knn-model-by-following-the-below-steps-">We can implement a KNN model by following the below steps:</h4>
+<ul>
+<li>Load the data</li>
+</ul>
+<p><img src="https://www.tutorialspoint.com/machine_learning_with_python/images/concept_of_k.jpg" alt=""></p>
+<ul>
+<li>Initialise the value of k</li>
+</ul>
+<p><img src="https://www.tutorialspoint.com/machine_learning_with_python/images/knn_algorithm.jpg" alt="data"></p>
+<ul>
+<li>For getting the predicted class, iterate from 1 to total number of training data points.</li>
+<li>Calculate the distance between test data and each row of training data.</li>
+</ul>
+<p><img src="https://miro.medium.com/max/403/0*M_DPxG7ORoUisdPG.png" alt="metrics"></p>
+<ul>
+<li>Sort the calculated distances in ascending order based on distance values</li>
+<li>Get top k rows from the sorted array</li>
+<li>Get the most frequent class of these rows</li>
+<li>Return the predicted class.</li>
+</ul>
+<p>The <strong>k</strong> in KNN is the nearest neighbors. K is the core deciding factor,
+also the preformance of the model depends upon the value of k.</p>
+<h1 id="but-how-to-choose-the-value-of-_k_-">But how to choose the value of <em>k</em>?</h1>
+<p> There is no optimal number of neighbors suits all kind of data sets. Each dataset has it&#39;s own requirements. 
+ In the case of a small number of neighbors, the noise will have a higher influence on the result, 
+ and a large number of neighbors make it computationally expensive.</p>
+<p><img src="https://static.javatpoint.com/tutorial/machine-learning/images/k-nearest-neighbor-algorithm-for-machine-learning3.png" alt="sdf"></p>
+<p>In real life scenarios, KNN is widely used as it is non-parametric which means 
+it does not make any underlying assumptions about the distributions of data. </p>
+<p>K-NN algorithm can be used for applications which require high accuracy as it makes highly accurate predictions. 
+The quality of predictions is completely dependent on the distance measure.
+Thus, this algorithm is suitable for applications for which you have 
+sufficient domain knowledge so that it can help you select an appropriate measure.</p>
+<p>It is an instance-based learning or lazy learning as it uses the entire training dataset 
+which gives more time for testing at the cost of memory.</p>
+<h1 id="knn-for-regression">KNN for Regression</h1>
+<p>The target is predicted by local interpolation of the targets associated of the nearest neighbors in the training set.Again,
+this k-neighbors regression use  n_neighbors, you can use more than the single closest neighbor for regression, 
+and <strong>the prediction is the average or mean of relevant neighbors.</strong></p>
+<p><img src="https://miro.medium.com/max/875/1*ZDCp9usTtL_d2SfIguPeiQ.png" alt="regression"></p>
+<h2 id="limitations-of-knn">Limitations of KNN</h2>
+<p>KNN works well with a small number of input variables, but struggles when the number of inputs is very large.
+As the number of dimensions increases the volume of the input space increases at an exponential rate.
+In high dimensions, points that may be similar may have very large distances. </p>
+<h2 id="practical-applications-of-k-nn">Practical Applications of K-NN</h2>
+<p>Now that we have we have seen how KNN works, let us look into some of the practical applications of KNN.</p>
+<ul>
+<li>Recommending products to people with similar interests, recommending movies and TV shows as per viewer’s choice and interest.</li>
+<li>Recommending hotels and other accommodation facilities while you are travelling based on your previous bookings.</li>
+<li>Some advanced examples could include handwriting detection (like OCR), image recognition and even video recognition.</li>
+</ul>
+
+ 
+ <p class="ipynb-link">You can learn more about this topic from<a href="https://github.com/Learn-Write-Repeat/ml/blob/main/K-Nearest%20Neighbors/Ankur_ML_KNN.ipynb">here</a>.</p>
+ 
+   </div>
+
+
+</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="d-flex flex-column justify-content-center align-items-center" id="footer" style="padding-bottom: 0;">
+        <h1>DevIncept.codes</h1>
+        <h5>Contact us:</h5>
+        <p>Email:<a href="#">&nbsp;support@devincept.tech</a></p>
+        <div class="d-flex flex-row" id="social-button"><button class="btn btn-primary" type="button"><a
+                    href="https://www.linkedin.com/company/devincept/" target="_blank"><i class="fa fa-linkedin-square"
+                        style="font-size: 24px;" href=""></i></a></button><button class="btn btn-primary" type="button"><a
+                    href="https://www.facebook.com/DevIncept/" target="_blank"><i class="fa fa-facebook"
+                        style="font-size: 24px;"></i></a></button>
+            <button class="btn btn-primary" type="button"><a href="https://www.instagram.com/devincept.tech/?hl=en"
+                    target="_blank"><i class="fa fa-instagram" style="font-size: 24px;"></i></a></button><button
+                class="btn btn-primary" type="button"><a href="https://github.com/DevIncept" target="_blank"><i
+                        class="fa fa-github" style="font-size: 24px;"></i></a></button></div>
+    </footer>
+    <script>
+        function cb(response) {
+            document.getElementById('visits').innerText = response.value;
+        }
+    </script>
+    <script async src="https://api.countapi.xyz/hit/ml-k-nearest/visits?callback=cb"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
